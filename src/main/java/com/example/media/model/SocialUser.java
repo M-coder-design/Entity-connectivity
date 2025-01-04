@@ -16,6 +16,6 @@ public class SocialUser {
     @JoinColumn(name = "social_profile")
     private SocialProfile socialProfile;
 
-    @OneToMany
+    @OneToMany(mappedBy = "socialUser")
     private List<Post> postList = new ArrayList<>();
 }
