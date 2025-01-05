@@ -1,5 +1,6 @@
 package com.example.media.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,8 +18,8 @@ public class SocialProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "socialProfile")
-//    @JoinColumn(name = "social_user")
-    private SocialUser user;
-
+    @OneToOne
+    @JsonIgnore
+    @JoinColumn(name = "social_user")
+    private SocialUser socialUser;
 }
