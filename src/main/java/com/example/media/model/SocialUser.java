@@ -19,8 +19,9 @@ public class SocialUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+   // @OneToOne(mappedBy = "socialUser",cascade = {CascadeType.REMOVE,CascadeType.PERSIST,CascadeType.MERGE})
     @OneToOne(mappedBy = "socialUser",cascade = CascadeType.ALL)
-    @JoinColumn(name = "social_profile")
+//    @JoinColumn(name = "social_profile")
     private SocialProfile socialProfile;
 
     @OneToMany(mappedBy = "socialUser")

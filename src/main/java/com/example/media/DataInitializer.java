@@ -1,4 +1,4 @@
-package com.example.media.config;
+package com.example.media;
 
 import com.example.media.model.SocialGroup;
 import com.example.media.model.SocialProfile;
